@@ -1,4 +1,4 @@
-package com.sznt.shop.gen;
+package com.sznt.shop;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.FieldFill;
@@ -29,13 +29,13 @@ public class CodeGenerator {
     public static final String DB_PASSWORD = "123456";
     public static final String PACKAGE_PARENT = "com.sznt.shop";
     public static final String MODULE = "user";
-    public static final String[] INCLUDE = {"user"};
+    public static final String[] INCLUDE = {"user", "undo_log"};
     public static final String DB_PREFIX = "";
 
     public static void main(String[] args) {
-        System.out.println("=== 开始生成 +" + MODULE + "模块的代码 ===");
+        System.out.println("=== 开始生成 " + MODULE + " 模块的代码 ===");
         genCode();
-        System.out.println("=== " + MODULE + "模块的代码生成完毕 ===");
+        System.out.println("=== " + MODULE + " 模块的代码生成完毕 ===");
     }
 
     public static void genCode() {
@@ -86,7 +86,7 @@ public class CodeGenerator {
                 .setService("service")
                 .setMapper("mapper")
                 .setEntity("model")
-                .setXml("mapper");
+                .setXml("mapper.xml");
         generator.setPackageInfo(pc);
 
         // 5、策略配置
