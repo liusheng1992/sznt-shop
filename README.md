@@ -2,7 +2,7 @@
 
 ## 个人博客
 
-- [Java练习生](https://cbqr.github.io)
+- **[Java练习生](https://cbqr.github.io)**
 
 ## 联系方式
 - **liusheng_work@163.com**
